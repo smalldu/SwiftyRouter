@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rJL-Ls-lpK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Router-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftyRouter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLa-Wr-Le1">
+                                <rect key="frame" x="100" y="94" width="175" height="50"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.83137254900000002" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="MDJ-zU-pHe"/>
+                                    <constraint firstAttribute="height" constant="50" id="eLB-g7-Ht0"/>
+                                </constraints>
+                                <state key="normal" title="Normal Push">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nomalPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1f-pg-Iba"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUH-Fg-d5n">
+                                <rect key="frame" x="100" y="164" width="175" height="50"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.83137254900000002" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Push with params">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushWithParams:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rdX-HJ-vib"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uuu-vS-0lo">
+                                <rect key="frame" x="100" y="234" width="175" height="50"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.83137254900000002" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Present">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="xpresent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3kQ-3A-W4I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uuu-vS-0lo" firstAttribute="height" secondItem="sLa-Wr-Le1" secondAttribute="height" id="0LF-B7-Kvb"/>
+                            <constraint firstItem="uUH-Fg-d5n" firstAttribute="centerX" secondItem="sLa-Wr-Le1" secondAttribute="centerX" id="6Vx-ok-eFV"/>
+                            <constraint firstItem="Uuu-vS-0lo" firstAttribute="top" secondItem="uUH-Fg-d5n" secondAttribute="bottom" constant="20" id="Aim-NN-5mD"/>
+                            <constraint firstItem="sLa-Wr-Le1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Ndd-V6-O46"/>
+                            <constraint firstItem="sLa-Wr-Le1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fx4-GL-vHF"/>
+                            <constraint firstItem="uUH-Fg-d5n" firstAttribute="top" secondItem="sLa-Wr-Le1" secondAttribute="bottom" constant="20" id="hbK-dJ-1Nj"/>
+                            <constraint firstItem="Uuu-vS-0lo" firstAttribute="centerX" secondItem="sLa-Wr-Le1" secondAttribute="centerX" id="kav-Ii-lJ7"/>
+                            <constraint firstItem="uUH-Fg-d5n" firstAttribute="width" secondItem="sLa-Wr-Le1" secondAttribute="width" id="nyU-iW-bdW"/>
+                            <constraint firstItem="Uuu-vS-0lo" firstAttribute="width" secondItem="sLa-Wr-Le1" secondAttribute="width" id="sR5-bO-A3g"/>
+                            <constraint firstItem="uUH-Fg-d5n" firstAttribute="height" secondItem="sLa-Wr-Le1" secondAttribute="height" id="t57-vN-8jl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Router" id="FYh-IE-NEh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874.39999999999998" y="776.76161919040487"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="usa-72-WY4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rJL-Ls-lpK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JTp-6p-Vfb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fJJ-nr-X46"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T0H-Hp-Snp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="776.76161919040487"/>
+        </scene>
+    </scenes>
+</document>
