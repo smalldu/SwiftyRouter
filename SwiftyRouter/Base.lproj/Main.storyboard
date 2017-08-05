@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -55,22 +56,62 @@
                                     <action selector="xpresent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3kQ-3A-W4I"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZfJ-1S-Ycf">
+                                <rect key="frame" x="0.0" y="294" width="375" height="373"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="81" id="tSE-My-led" customClass="DemoCell" customModule="SwiftyRouter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="81"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tSE-My-led" id="V9S-0i-aKG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUSH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sM7-gI-D3g">
+                                                    <rect key="frame" x="28" y="30" width="45.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sM7-gI-D3g" firstAttribute="centerY" secondItem="V9S-0i-aKG" secondAttribute="centerY" id="nVu-fk-I2j"/>
+                                                <constraint firstItem="sM7-gI-D3g" firstAttribute="leading" secondItem="V9S-0i-aKG" secondAttribute="leadingMargin" constant="20" id="q3T-zt-60g"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leftLabel" destination="sM7-gI-D3g" id="us3-n8-aY0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ZCU-7z-ba3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="210-CE-Jf1"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Uuu-vS-0lo" firstAttribute="height" secondItem="sLa-Wr-Le1" secondAttribute="height" id="0LF-B7-Kvb"/>
+                            <constraint firstItem="ZfJ-1S-Ycf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0vL-nn-WyS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZfJ-1S-Ycf" secondAttribute="bottom" id="3hr-qo-AmQ"/>
                             <constraint firstItem="uUH-Fg-d5n" firstAttribute="centerX" secondItem="sLa-Wr-Le1" secondAttribute="centerX" id="6Vx-ok-eFV"/>
                             <constraint firstItem="Uuu-vS-0lo" firstAttribute="top" secondItem="uUH-Fg-d5n" secondAttribute="bottom" constant="20" id="Aim-NN-5mD"/>
                             <constraint firstItem="sLa-Wr-Le1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Ndd-V6-O46"/>
+                            <constraint firstItem="ZfJ-1S-Ycf" firstAttribute="top" secondItem="Uuu-vS-0lo" secondAttribute="bottom" constant="10" id="ddw-KF-Lus"/>
                             <constraint firstItem="sLa-Wr-Le1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fx4-GL-vHF"/>
                             <constraint firstItem="uUH-Fg-d5n" firstAttribute="top" secondItem="sLa-Wr-Le1" secondAttribute="bottom" constant="20" id="hbK-dJ-1Nj"/>
                             <constraint firstItem="Uuu-vS-0lo" firstAttribute="centerX" secondItem="sLa-Wr-Le1" secondAttribute="centerX" id="kav-Ii-lJ7"/>
                             <constraint firstItem="uUH-Fg-d5n" firstAttribute="width" secondItem="sLa-Wr-Le1" secondAttribute="width" id="nyU-iW-bdW"/>
                             <constraint firstItem="Uuu-vS-0lo" firstAttribute="width" secondItem="sLa-Wr-Le1" secondAttribute="width" id="sR5-bO-A3g"/>
                             <constraint firstItem="uUH-Fg-d5n" firstAttribute="height" secondItem="sLa-Wr-Le1" secondAttribute="height" id="t57-vN-8jl"/>
+                            <constraint firstAttribute="trailing" secondItem="ZfJ-1S-Ycf" secondAttribute="trailing" id="vT4-vg-JdX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Router" id="FYh-IE-NEh"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZfJ-1S-Ycf" id="W0E-Ee-wat"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

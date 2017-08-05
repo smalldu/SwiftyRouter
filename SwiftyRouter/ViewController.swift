@@ -39,9 +39,10 @@ enum RouterPath: RouterPathable {
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var tableView: UITableView!
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    tableView.rowHeight = 50
   }
   
   @IBAction func nomalPush(_ sender: Any) {
@@ -58,6 +59,29 @@ class ViewController: UIViewController {
     Router.open(RouterPath.bvc("BVC title"), present: true)
   }
 }
+
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 1
+  }
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DemoCell
+    return cell
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
 
 
 class AVC: UIViewController, Routable{

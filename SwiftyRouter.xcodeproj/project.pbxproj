@@ -15,6 +15,7 @@
 		20771DCB1F347C9F00443860 /* SwiftyRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20771DCA1F347C9F00443860 /* SwiftyRouterTests.swift */; };
 		20771DD61F347C9F00443860 /* SwiftyRouterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20771DD51F347C9F00443860 /* SwiftyRouterUITests.swift */; };
 		20771DE51F347CC800443860 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20771DE41F347CC800443860 /* Router.swift */; };
+		20771DE71F357EBD00443860 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20771DE61F357EBD00443860 /* DemoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		20771DD51F347C9F00443860 /* SwiftyRouterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyRouterUITests.swift; sourceTree = "<group>"; };
 		20771DD71F347C9F00443860 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20771DE41F347CC800443860 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		20771DE61F357EBD00443860 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				20771DBC1F347C9F00443860 /* Assets.xcassets */,
 				20771DBE1F347C9F00443860 /* LaunchScreen.storyboard */,
 				20771DC11F347C9F00443860 /* Info.plist */,
+				20771DE61F357EBD00443860 /* DemoCell.swift */,
 			);
 			path = SwiftyRouter;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				20771DB81F347C9F00443860 /* ViewController.swift in Sources */,
 				20771DE51F347CC800443860 /* Router.swift in Sources */,
+				20771DE71F357EBD00443860 /* DemoCell.swift in Sources */,
 				20771DB61F347C9F00443860 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +534,7 @@
 				20771DDC1F347C9F00443860 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20771DDD1F347C9F00443860 /* Build configuration list for PBXNativeTarget "SwiftyRouterTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +543,7 @@
 				20771DDF1F347C9F00443860 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20771DE01F347C9F00443860 /* Build configuration list for PBXNativeTarget "SwiftyRouterUITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +552,7 @@
 				20771DE21F347C9F00443860 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
